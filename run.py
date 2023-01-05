@@ -21,7 +21,7 @@ if __name__ == "__main__":
         p = Pipeline(checkpoint_siam=checkpoint_siam, checkpoint_seg=checkpoint_seg, img_w=IMG_W, img_h=IMG_H)
 
         # COLOR
-        source_img = cv2.imread(IMG_PATH, cv2.IMREAD_COLOR)
+        source_img = cv2.imread(f"{dir}/{file}", cv2.IMREAD_COLOR)
         source_img = cv2.resize(source_img, (IMG_W, IMG_H))
 
         img_out, _ = p.run(source_img=source_img, mask_th=77)

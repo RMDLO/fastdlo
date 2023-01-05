@@ -1,0 +1,5 @@
+# Ignore weights directory
+weights/
+
+# Ignore image prediction directory
+predictions/
